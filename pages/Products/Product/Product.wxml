@@ -1,0 +1,37 @@
+<swiper class="imgContainer {{isShowContent?'hide':''}}">
+    <swiper-item wx:for="{{imgs}}">
+        <image class="img" src="{{item.img}}" mode="widthFix" />
+    </swiper-item>
+</swiper>
+
+<view class="flex-box infoTitleContainer" 
+    bindtouchstart="touchstart"
+    bindtouchmove="touchmove"
+    bindtouchend="touchend"
+>
+    <view wx:for="{{info}}"
+        class="flex-1 flex-b-cc simple-ellipsis1 infoTitle {{activeInfoIndex == index?'active':''}}" 
+        bindtap="changeSwiper" data-index="{{index}}"
+    >
+        {{item.title}}
+    </view>
+</view>
+
+<swiper class="infoContainer {{isShowContent?'expandHeight':''}}" 
+    current="{{activeInfoIndex}}" bindchange="swipeSwiper" 
+>
+    <swiper-item wx:for="{{info}}">
+      <scroll-view scroll-y="{{true}}" bindscroll="listenScroll" 
+            class="scrollView {{isShowContent?'expandHeight':''}}"
+            bindtouchstart="touchstart"
+            bindtouchmove="touchmove"
+            bindtouchend="touchend"
+        >
+        <view class="richText">
+          <rich-text nodes="{{item.content}}"></rich-text>
+            
+        </view>
+      </scroll-view>
+    </swiper-item>
+</swiper>
+

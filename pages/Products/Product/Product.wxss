@@ -1,0 +1,75 @@
+.imgContainer {
+  height: 300rpx;
+  transition: all 0.5s ease-in-out;
+}
+
+.imgContainer.hide {
+  height: 0;
+}
+
+.imgContainer .img {
+  height: 300rpx;
+  width: 100%;
+}
+
+.infoTitleContainer {
+  border-top: 1px solid #e6e9f2;
+  border-bottom: 1px solid #e6e9f2;
+}
+
+.infoTitle {
+  position: relative;
+  height: 85rpx;
+  font-size: 24rpx;
+  color: #999999;
+}
+
+.infoTitle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  margin-top: -25rpx;
+  width: 2rpx;
+  height: 50rpx;
+  background-color: #f2f4f8;
+}
+
+.infoTitle::before:first-child {
+  width: 0rpx;
+}
+
+.infoTitle.active {
+  color: #2727ff;
+}
+
+.infoTitle.active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 70rpx;
+  height: 6rpx;
+  margin-left: -35rpx;
+  background-color: #2727ff;
+}
+
+.infoContainer {
+  height: calc(100vh - 90rpx - 300rpx);
+}
+
+.infoContainer.expandHeight {
+  height: calc(100vh - 90rpx);
+}
+
+.scrollView {
+  height: calc(100vh - 90rpx - 300rpx);
+}
+
+.scrollView.expandHeight {
+  height: calc(100vh - 90rpx);
+}
+
+.scrollView .richText {
+  padding: 40rpx 40rpx 200rpx;
+}

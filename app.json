@@ -1,0 +1,18 @@
+{
+    "pages": [
+
+        "pages/Products/Product/Product"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "商品滑动查看效果",
+        "navigationBarTextStyle": "black",
+        "enablePullDownRefresh": false,
+        "backgroundTextStyle": "light",
+        "backgroundColor": "#fff"
+    },
+
+    "networkTimeout": {
+        "request": 60000
+    }
+}
